@@ -1,5 +1,6 @@
 from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister, transpile
 from qiskit_aer import AerSimulator
+import matplotlib.pyplot as plt
 
 # 1. Setup Registers
 # We use 3 qubits for the code, 2 ancilla qubits, 2 ancilla classical bits, and 1 classical bit for the result
@@ -70,3 +71,5 @@ counts = result.get_counts()
 print("Circuit Summary:")
 print(qc.draw(output='text'))
 print(f"\nResults (Target state was 1): {counts}")
+fig = qc.draw("mpl")
+plt.show()
