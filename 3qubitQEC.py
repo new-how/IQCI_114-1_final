@@ -55,6 +55,14 @@ qc.barrier()
 # qc.ccx(q[2], q[1], q[0])
 # qc.barrier()
 
+# In fact, we can use the quantum Majority circuit to avoid redundant measurements
+# It works as follows:
+# qc.cx(q[0], q[1])
+# qc.cx(q[0], q[2])
+# qc.ccx(q[2], q[1], q[0])
+# qc.barrier
+# qc.measure(q[2], c[2])
+
 # --- STEP 4: MEASUREMENT ---
 # We measure the corrected logical qubits
 qc.measure(q[0], c[0])
