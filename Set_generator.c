@@ -21,7 +21,7 @@ int majority_bit(unsigned int x, int n) {
 }
 
 int main() {
-    int digits = N; // Print as an 8-digit binary number (e.g., a byte)
+    int digits = N;
     printf("[");
     for(unsigned int i = 0; i < pow(2,digits); i++) {
         if(majority_bit(i, digits) == 0) {
